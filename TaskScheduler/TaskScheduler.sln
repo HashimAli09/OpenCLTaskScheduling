@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedulerConsole", "SchedulerConsole\SchedulerConsole.csproj", "{C7564374-6300-42CC-9D8F-5E97ACFC3019}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{9F9C44D4-8AEA-4322-AF74-041DBB3978B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C7564374-6300-42CC-9D8F-5E97ACFC3019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7564374-6300-42CC-9D8F-5E97ACFC3019}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7564374-6300-42CC-9D8F-5E97ACFC3019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F9C44D4-8AEA-4322-AF74-041DBB3978B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F9C44D4-8AEA-4322-AF74-041DBB3978B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F9C44D4-8AEA-4322-AF74-041DBB3978B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F9C44D4-8AEA-4322-AF74-041DBB3978B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

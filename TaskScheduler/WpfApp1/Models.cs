@@ -65,52 +65,52 @@ namespace SchedulerConsole
         }
     }
 
-    public class Core
-    {
-        public float ClockSpeed { get; set; }
+    //public class Core
+    //{
+    //    public float ClockSpeed { get; set; }
 
-        public int Id { get; private set; }
+    //    public int Id { get; private set; }
 
-        public event Action<bool> BusyStateChange;
- 
-        public bool IsBusy { get; private set; }
+    //    public int TasksInQueue { get; private set; }
 
-        public Core(int id, float clockSpeed)
-        {
-            ClockSpeed = clockSpeed;
-            Id = id;
-            //TasksInQueue = 0;
-        }
+    //    public bool IsBusy { get; private set; }
 
-        public async Task<float> ExecuteAsync(Job job)
-        {
-            float busyWaitDealy = 0;
-            if (IsBusy)
-            {
-                //TasksInQueue++;
-                busyWaitDealy = await WaitAsync();
-                //TasksInQueue--;
-            }
+    //    public Core(int id, float clockSpeed)
+    //    {
+    //        ClockSpeed = clockSpeed;
+    //        Id = id;
+    //        TasksInQueue = 0;
+    //    }
 
-            IsBusy = true;
+    //    public async Task<float> ExecuteAsync(Job job)
+    //    {
+    //        float busyWaitDealy = 0;
+    //        if (IsBusy) 
+    //        {
+    //            TasksInQueue++;
+    //            busyWaitDealy = await WaitAsync();
+    //            TasksInQueue--;
+    //        }
 
-            float exeTime = job.NumberOfInstructions / ClockSpeed;
-            await Task.Delay(TimeSpan.FromMilliseconds(exeTime));
+    //        IsBusy = true;
 
-            IsBusy = false;
-            return exeTime + busyWaitDealy;
-        }
+    //        float exeTime = job.NumberOfInstructions / ClockSpeed;
+    //        await Task.Delay(TimeSpan.FromMilliseconds(exeTime));
 
-        public async Task<float> WaitAsync()
-        {
-            float start = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-            while (IsBusy)
-            {
-                await Task.Delay(1);
-            }
-            return DateTimeOffset.Now.ToUnixTimeMilliseconds() - start;
-        }
-    }
+    //        IsBusy = false;
+    //        return exeTime + busyWaitDealy;
+    //    }
+
+    //    public async Task<float> WaitAsync() 
+    //    {
+    //        float start = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+    //        while (IsBusy) 
+    //        {
+    //            await Task.Delay(1);
+    //        }
+    //        return DateTimeOffset.Now.ToUnixTimeMilliseconds() - start;
+    //    }
+    //}
 
     public class Job 
     {
